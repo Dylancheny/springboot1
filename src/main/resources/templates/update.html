@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" th:inline="none"></script>
+</head>
+<body>
+<center>
+    <form th:action="@{/update}"th:object="${user}">
+        <table border="1" cellpadding="5">
+            序号：<input type="text" name="id" th:value="*{id}" readonly="readonly"/><br/>
+            姓名：<input type="text" name="username" th:value="*{username}" /><br/>
+            密码：<input type="text" name="password" th:value="*{password}" /><br/>
+            <input type="submit" value="修改"/>
+        </table>
+    </form>
+</center>
+</body>
+</html>
